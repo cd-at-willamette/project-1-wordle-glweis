@@ -16,12 +16,14 @@ def wordle():
     def enter_action():
         # What should happen when RETURN/ENTER is pressed.
         gw.show_message("You need to implement this method")
-
+        display_word("happy",gw)
 
     gw = WordleGWindow()
     gw.add_enter_listener(enter_action)
 
-
+def display_word(word, gw):
+    for i in range(N_COLS):
+        gw.set_square_letter(0,i,word[i])
 
 
 # Startup boilerplate
