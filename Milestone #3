@@ -1,0 +1,35 @@
+########################################
+# Name: Gabriella Weis
+# Collaborators (if any):
+# GenAI Transcript (if any):
+# Estimated time spent (hr): 30 minutes
+# Description of any added extensions:
+########################################
+
+from WordleGraphics import *  # WordleGWindow, N_ROWS, N_COLS, CORRECT_COLOR, PRESENT_COLOR, MISSING_COLOR, UNKNOWN_COLOR
+from english import * # ENGLISH_WORDS, is_english_word
+import random
+
+def wordle():
+    # The main function to play the Wordle game.
+
+    def enter_action():
+        # What should happen when RETURN/ENTER is pressed.
+        gw.show_message("You need to implement this method")
+
+    gw = WordleGWindow()
+    gw.add_enter_listener(enter_action)
+        
+    def random_five_letter_word():
+        s = ""
+        random.shuffle(ENGLISH_WORDS)
+        for word in ENGLISH_WORDS:
+            if len(word) == 5 and len(s) == 0:
+                s += word
+                print(s)
+
+    random_five_letter_word()
+
+# Startup boilerplate
+if __name__ == "__main__":
+    wordle()
