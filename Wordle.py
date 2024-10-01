@@ -48,7 +48,6 @@ def wordle():
             else:
                 gw.show_message(f"Oops! The word was actually {answer}.")
 
-    
         # green
         for i in range(N_COLS):
             if guess[i] == answer[i]:
